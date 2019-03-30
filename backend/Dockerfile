@@ -3,8 +3,8 @@ FROM maven:3-jdk-8-alpine AS build
 
 WORKDIR /workdir
 
-COPY src ./src
-COPY pom.xml .
+COPY . .
+
 RUN mvn package
 
 # Then we copy the war file into a Wildfly container
