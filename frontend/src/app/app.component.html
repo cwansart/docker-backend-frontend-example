@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Date</th>
+    <th scope="col">Author</th>
+    <th scope="col">Message</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let message of messages | async">
+    <td>{{message.id}}</td>
+    <td>{{message.date | date}}</td>
+    <td>{{message.author}}</td>
+    <td>{{message.message}}</td>
+  </tr>
+  </tbody>
+</table>
