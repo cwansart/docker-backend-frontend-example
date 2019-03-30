@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 import { Message } from './message';
 
 @Component({
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.messages = this.http.get<Message[]>('http://localhost:8080/backend-1.0.0-SNAPSHOT/api/messages');
+    this.messages = this.http.get<Message[]>(`${environment.apiUrl}/messages`);
   }
 
 }
