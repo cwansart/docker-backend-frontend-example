@@ -1,28 +1,24 @@
 package de.openknowledge.dockerbackendfrontendexample.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
+@Entity
 public class Message {
 
-    private final Long id;
+    @Id
+    private Long id;
 
-    private final String author;
+    @NotNull
+    private String author;
 
-    private final LocalDateTime date;
+    @NotNull
+    private LocalDateTime date;
 
-    private final String message;
-
-    Message(
-        final Long id,
-        final String author,
-        final LocalDateTime date,
-        final String message
-    ) {
-        this.id = id;
-        this.author = author;
-        this.date = date;
-        this.message = message;
-    }
+    @NotNull
+    private String message;
 
     public Long getId() {
         return id;

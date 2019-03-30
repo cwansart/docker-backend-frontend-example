@@ -19,4 +19,5 @@ public class MessageResource {
     public Response getAll() {
         return Response.ok(repository.getAll()).build();
     }
+
 }

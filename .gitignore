@@ -1,2 +1,3 @@
 .idea
 *.iml
+/h2-persistent-data/

@@ -1,8 +1,15 @@
 version: '3'
 
 services:
+  database:
+    image: oscarfonts/h2
+    volumes:
+      - ./h2-persistent-data:/opt/h2-data
+
   backend:
     build: backend
+    depends_on:
+      - database
     ports:
       - 8081:8080
 
