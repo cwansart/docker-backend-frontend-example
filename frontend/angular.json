@@ -24,9 +24,14 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "ok-styleguide/set1.css",
+              "ok-styleguide/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "ok-styleguide/main.js",
+              "ok-styleguide/plugin.collapse.js",
+              "ok-styleguide/plugin.toast.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
